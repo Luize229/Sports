@@ -1,0 +1,433 @@
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#scroll {
+    top: 0;
+    right: 0;
+    background: white;
+    width: 12px;
+    height: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px white,
+                0 0 20px white,
+                0 0 40px white;
+    border-radius: 10px;
+}
+
+.col-xs-2 {
+    padding-left: 30px;
+}
+.col-xs-10 {
+    padding-right: 30px;
+}
+
+body {
+    margin: 0;
+    padding-top: 74px;
+    color: white;
+    background-color: rgb(91, 199, 245);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(132, 218, 254);
+    z-index: 9999;
+}
+
+.search_form {
+    display: inline-block;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+}
+
+.search_input {
+    background: white;
+    flex: 2;
+    width: 100%;
+    border: 2px solid rgb(52, 33, 162);
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+.search_input:hover {
+    transition: 0.8s;
+    border-color: white;
+    box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+}
+
+::placeholder{
+    color: black;
+}
+
+.search_button {
+    border: none;
+    position: absolute;
+    right: 2px;
+    top: 5px;
+    height: 20px;
+    padding: 0 7px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.nav {
+    padding-top: 10px;
+    text-align: right;
+}
+
+.nav_item {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(52, 33, 162);
+    text-decoration: none;
+    margin: 0px 5px;
+}
+
+.nav_item:hover {
+    transition: color 0.8s;
+    color: white;
+}
+
+.col-xs-6 {
+    padding-left: 20px;
+}
+
+.hero {
+    background-image: url(https://www.capecod.com/wp-content/uploads/ThinkstockPhotos-511945444.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 20px;
+    padding: 100px 0 30px 0;
+    position: relative;
+    color: white;
+}
+
+.moreText {
+    display: none;
+}
+
+.read-more-btn {
+    cursor: pointer;
+}
+
+.read-more-btn:hover {
+    transition: 0.8s;
+    background-color: white;
+    box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+}
+
+.myText.show-more .moreText {
+    display: inline;
+}
+
+.myText.show-more .myDots {
+    display: none;
+}
+
+.hero_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 1;
+    background-color:black;
+}
+
+.hero_content {
+    position:relative;
+    z-index: 2;
+}
+
+.col-xs-4 {
+    text-align: center;
+}
+
+.description {
+    text-align: left;
+    margin-left: 20px;
+    color: white;
+}
+
+.row {
+    padding-bottom: 15px;
+}
+
+.new {
+    padding: 25px 0;
+    color: black;
+}
+
+.news_read-more-wrapper {
+    width: 100%;
+    text-align:right;
+    padding-right: 50px;
+}
+
+.news_read-more {
+    color: rgb(52, 33, 162);
+}
+
+.news_read-more:hover {
+    transition: 0.8s;
+    color:white;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    width: 850px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    left: 4px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.myDots {
+    text-align:center
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 2px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    background-color: rgb(52, 33, 162);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: white;
+    box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.content {
+    background-color: rgb(19, 19, 81);
+    padding: 10px 0 25px 0;
+    color: white;
+}
+
+.content_table {
+    border: 3px solid rgb(113, 216, 254);
+}
+
+.content_table th, .content_table td {
+    border: 3px solid rgb(113, 216, 254);
+    padding: 30px;
+}
+
+.myComments {
+    background-color:  white;
+    background-image: url(http://1.bp.blogspot.com/-2IgxAXmKbZ8/Tv7biiNVlGI/AAAAAAAAAI8/39keVYAWEAU/s1600/snowboarding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px 0 30px 0;
+    margin-right: 25px;
+    position: relative;
+}
+
+.container_comments {
+    max-width: 100%;
+    width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.comments {
+    margin-bottom: 20px;
+}
+
+.form-text {
+    border: 2px solid black;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 10px 0;
+    width: 250px;
+}
+
+.form-text:hover{
+    transition: 0.8s;
+    border-color: white;
+    box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+}
+
+.form-body {
+    border: 2px solid black;
+    cursor: pointer;
+    margin-top: 5px;
+    width: 400px;
+}
+
+.form-body:hover {
+    transition: 0.8s;
+    border-color: white;
+    box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+}
+
+.submit_button {
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: large;
+    background-color: white;
+}
+
+.submit_button:hover {
+    transition: 0.8s;
+    background-color: white;
+    box-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+}
+
+.text {
+    max-width: 100%;
+    width: 5px;
+    margin: 0;
+}
+
+.footer {
+    padding: 10px 0 25px 0;
+    background-color: rgb(4, 4, 38);
+}
+
+.footer-container {
+    max-width: 100%;
+    width: 1350px;
+    margin:auto;
+    position: relative;
+    left: 90px;
+}
+
+.menu{
+   position: relative;
+   left: 70px;
+}
+
+.navigation {
+    position: relative;
+    left: 70px;
+
+}
+
+.navigation_begining {
+    color: blue;
+}
+
+.navigation_begining:hover {
+    transition: 0.5s;
+    color:white;
+}
+
+.navigation_aboutus {
+    color: blue;
+}
+
+.navigation_aboutus:hover {
+    transition: 0.5s;
+    color:white;
+}
+
+.navigation_contacts {
+    color: blue;
+}
+
+.navigation_contacts:hover {
+    transition: 0.5s;
+    color:white;
+}
+
+.copyright {
+    background-color:black;
+    padding: 10px 0;
+    font-size: 18px;
+}
